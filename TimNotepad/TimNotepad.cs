@@ -11,20 +11,11 @@ using System.Windows.Forms;
 
 namespace TimNotepad
 {
-    public partial class TimNotepadForm : Form
+    partial class TimNotepadForm
     {
-        public TimNotepadForm()
+        private void insertToolStripMenuItem_Click(object s, EventArgs e)
         {
-            InitializeComponent();
-            saveFileDialog1.Filter = "Text File(*.txt) | *.txt|TIM Notepad File(*.tnf)|*.tnf";
-        }
-
-        private void insertToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (richTextBox1.TextLength > 0)
-            {
-                richTextBox1.Paste();
-            }
+            richTextBox1.Paste();
         }
 
         private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -34,12 +25,11 @@ namespace TimNotepad
             string filename = saveFileDialog1.FileName;
             File.WriteAllText(filename, richTextBox1.Text);
             MessageBox.Show("File saved");
-
         }
 
         private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
-
+            MessageBox.Show("File saved");
         }
 
         private void opeToolStripMenuItem_Click(object sender, EventArgs e)

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TimNotepad.Properties {
+namespace TimNotepadForm.Properties {
     using System;
     
     

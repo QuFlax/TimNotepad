@@ -9,11 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace А_та_П_4
+namespace TimNotepad
 {
-    public partial class Form1 : Form
+    public partial class TimNotepadForm : Form
     {
-        public Form1()
+        public TimNotepadForm()
         {
             InitializeComponent();
             saveFileDialog1.Filter = "Text File(*.txt) | *.txt|TIM Notepad File(*.tnf)|*.tnf";
@@ -25,11 +25,6 @@ namespace А_та_П_4
             {
                 richTextBox1.Paste();
             }
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
